@@ -73,7 +73,7 @@ const Member = props => {
 
   return (
     <Layout>
-      <span>This is Members page.</span>
+      <span>Current Members.</span>
       {console.log("members info is ", props.memberData)}
       <ReactTable data={data} columns={columns} />
     </Layout>

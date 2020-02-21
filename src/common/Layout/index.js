@@ -23,7 +23,7 @@ const Layout = props => {
       <Header class="pt-10" showBackground={isScrolled} />
       <Sidebar />
       <Fragment>{props.children}</Fragment>
-      <Footer />
+      {/* <Footer /> */}
     </Fragment>
   );
 };

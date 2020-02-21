@@ -1,9 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import history from "utils/history";
+import "./style.css";
 
 const Sidebar = props => {
   let sidebarOptions = [
+    { name: "Dashboard", iconImage: "/", redirectionPath: "/dashboard" },
     { name: "Members", iconImage: "/", redirectionPath: "/members" }
   ];
   return (
@@ -19,6 +21,11 @@ const Sidebar = props => {
         {sidebarOptions.map(data => {
           return (
             <li
+              className={
+                window.location.pathname == data.redirectionPath
+                  ? "activeOption"
+                  : ""
+              }
               style={{ cursor: "pointer" }}
               onClick={() => history.push(data.redirectionPath)}
             >
